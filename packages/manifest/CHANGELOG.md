@@ -1,5 +1,13 @@
 # manifest
 
+## 6.29.4
+
+### Patch Changes
+
+- 3553466: Bedrock discovery now lists the `us.` and `global.` Runtime inference profiles of GPT-6.1 Sol. By default, Chat Completions requests with function tools to these profiles are served through Runtime Responses, which drops sampling parameters such as `temperature` and `top_p`, as for the other Bedrock Runtime GPT profiles. Set `BEDROCK_RUNTIME_CHAT_VIA_RESPONSES=false` to keep them on Runtime Chat Completions.
+- 34bb5b5: Show GPT-6.2 Sol and Astra in ChatGPT subscription model discovery by updating the client version to `0.170.0`.
+- 459f03f: Fix saved `reasoning_effort` and `max_completion_tokens` being sent as-is on Responses API routes, where the provider rejected them and the setting never applied
+
 ## 6.29.3
 
 ### Patch Changes
